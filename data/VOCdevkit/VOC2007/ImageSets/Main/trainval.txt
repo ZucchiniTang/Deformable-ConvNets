@@ -1,7 +1,3 @@
-# This is not the original version
-# log:
-# 20181023: Delete (50:), only using for colab.
- 
 000005
 000007
 000009

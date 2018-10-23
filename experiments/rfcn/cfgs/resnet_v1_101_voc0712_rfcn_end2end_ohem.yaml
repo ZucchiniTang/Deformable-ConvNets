@@ -11,7 +11,7 @@ default:
   frequent: 100
   kvstore: device
 network:
-  pretrained: "./model/pretrained_model/resnet_v1_101"
+  pretrained: "./model/pretrained_model/rfcn_coco"
   pretrained_epoch: 0
   PIXEL_MEANS:
   - 103.06

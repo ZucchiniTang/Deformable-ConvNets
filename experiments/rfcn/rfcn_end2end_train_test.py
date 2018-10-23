@@ -4,6 +4,7 @@
 # Licensed under The MIT License [see LICENSE for details]
 # Written by Yuwen Xiong
 # --------------------------------------------------------
+# Qing_Log: 20181023: #test.main()
 import os
 import sys
 os.environ['PYTHONUNBUFFERED'] = '1'

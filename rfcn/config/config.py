@@ -40,17 +40,17 @@ config.network.RCNN_FEAT_STRIDE = 16
 config.network.FIXED_PARAMS = ['gamma', 'beta']
 config.network.FIXED_PARAMS_SHARED = ['gamma', 'beta']
 config.network.ANCHOR_SCALES = (8, 16, 32)
-config.network.ANCHOR_RATIOS = (0.5, 1, 2)
+config.network.ANCHOR_RATIOS = (1)
 config.network.NUM_ANCHORS = len(config.network.ANCHOR_SCALES) * len(config.network.ANCHOR_RATIOS)
 
 # dataset related params
 config.dataset = edict()
-config.dataset.dataset = 'PascalVOC'
-config.dataset.image_set = '2007_trainval'
-config.dataset.test_image_set = '2007_test'
-config.dataset.root_path = './data'
-config.dataset.dataset_path = './data/VOCdevkit'
-config.dataset.NUM_CLASSES = 21
+config.dataset.dataset = 'GTSDB' #'PascalVOC'
+config.dataset.image_set = 'TrainIJCNN2013' # '2007_trainval'
+config.dataset.test_image_set = 'TestIJCNN2013' #'2007_test'
+config.dataset.root_path = './data' #'./data'
+config.dataset.dataset_path = './data/FullIJCNN2013'# './data/VOCdevkit'
+config.dataset.NUM_CLASSES = 4
 
 
 config.TRAIN = edict()
@@ -90,7 +90,7 @@ config.TRAIN.ALTERNATE.rpn3_epoch = 0       # recommend 3
 # whether resume training
 config.TRAIN.RESUME = False
 # whether flip image
-config.TRAIN.FLIP = True
+config.TRAIN.FLIP = False
 # whether shuffle image
 config.TRAIN.SHUFFLE = True
 # whether use OHEM
@@ -100,7 +100,7 @@ config.TRAIN.BATCH_IMAGES = 2
 # e2e changes behavior of anchor loader and metric
 config.TRAIN.END2END = False
 # group images with similar aspect ratio
-config.TRAIN.ASPECT_GROUPING = True
+config.TRAIN.ASPECT_GROUPING = False
 
 # R-CNN
 # rcnn rois batch size

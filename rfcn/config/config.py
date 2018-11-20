@@ -41,7 +41,7 @@ config.network.FIXED_PARAMS = ['gamma', 'beta']
 config.network.FIXED_PARAMS_SHARED = ['gamma', 'beta']
 config.network.ANCHOR_SCALES = (8, 16, 32)
 config.network.ANCHOR_RATIOS = (1
-config.network.NUM_ANCHORS = len(config.network.ANCHOR_SCALES) * 1
+config.network.NUM_ANCHORS = len(config.network.ANCHOR_SCALES)
 
 # dataset related params
 config.dataset = edict()

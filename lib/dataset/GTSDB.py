@@ -70,7 +70,7 @@ class GTSDB(IMDB):
         """
         img_path = index.split(';')
         img_path = img_path[0]
-        image_file = os.path.join(self.data_path, img_path)
+        image_file = os.path.join(self.data_path,self.image_set, img_path)
         assert os.path.exists(image_file), 'Path does not exist: {}'.format(image_file)
         return image_file
 

@@ -56,7 +56,7 @@ class GTSDB(IMDB):
         find out which indexes correspond to given image set (train or val)
         :return:
         """
-        image_set_index_file = os.path.join(self.data_path, 'FullIJCNN2013', 'TrainIJCNN2013' , 'gt.txt')
+        image_set_index_file = os.path.join(self.data_path, 'TrainIJCNN2013' , 'gt.txt')
         assert os.path.exists(image_set_index_file), 'Path does not exist: {}'.format(image_set_index_file)
         with open(image_set_index_file) as f:
             image_set_index = [x.strip() for x in f.readlines()]

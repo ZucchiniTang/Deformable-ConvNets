@@ -36,7 +36,7 @@ class GTSDB(IMDB):
         #image_set = image_set[len(year) + 1 : len(image_set)]
         super(GTSDB, self).__init__('GTSDB', image_set, root_path, devkit_path, result_path)  # set self.name
         self.root_path = root_path
-        self.data_path = os.path.join(root_path, 'GTSDB')
+        self.data_path = os.path.join(root_path, 'FullIJCNN2013')
 
         self.classes = ['__background__',  # always index 0
                         'prohibitory', 'mandatory', 'danger', 'other']
@@ -56,7 +56,7 @@ class GTSDB(IMDB):
         find out which indexes correspond to given image set (train or val)
         :return:
         """
-        image_set_index_file = os.path.join(self.data_path, 'GTSDB', self.image_set + '.txt')
+        image_set_index_file = os.path.join(self.data_path, 'FullIJCNN2013', 'TrainIJCNN2013' , 'gt.txt')
         assert os.path.exists(image_set_index_file), 'Path does not exist: {}'.format(image_set_index_file)
         with open(image_set_index_file) as f:
             image_set_index = [x.strip() for x in f.readlines()]

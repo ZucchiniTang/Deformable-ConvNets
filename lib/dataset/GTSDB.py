@@ -68,7 +68,7 @@ class GTSDB(IMDB):
         :param index: index of a specific image
         :return: full path of this image
         """
-        image_file = os.path.join(self.data_path, 'JPEGImages', index + '.jpg')
+        image_file = os.path.join(self.data_path, index[0])
         assert os.path.exists(image_file), 'Path does not exist: {}'.format(image_file)
         return image_file
 
